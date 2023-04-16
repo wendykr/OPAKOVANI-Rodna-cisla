@@ -189,5 +189,6 @@ Cifry budeme do stránky vkládat pomocí vlastnosti `innerHTML`.
 - V souboru `index.html` vytvořte `div` s nějakým smysluplným `id`, ve kterém budeme zobrazovat jednotlivé cifry. Nastylujte jej pomocí flexboxu tak, abychom mohli cifry zobrazovat vedle sebe.
 - Jakmile uživatel klikne na tlačítko *Zkontrolovat*, zavolejte na uživatelův vstup `validateCharacters`. Projděte vrácené pole pomocí cyklu `forEach` a naplňte váš připravený `div` ciframi s použitím vlastnosti `innerHTML`.
 Vaše aplikace by měla ve výsledku fungovat tak, že kdykoliv uživatel zadá rodné číslo a nechá si jej zkontrolovat, aplikace vypíše, zda je číslo zadané dobře nebo špatně, a zobrazí jednotlivé znaky čísla s tím, že cifry jsou zelené a špatně zadané znaky jsou červené.
+
 ![ukázka výsledku](https://kodim.cz/cms/assets/kurzy/daweb/js2/opakovani/cv-innerhtml/cvlekce%3Ecifry-innerhtml/spravne.png)
 ![ukázka výsledku](https://kodim.cz/cms/assets/kurzy/daweb/js2/opakovani/cv-innerhtml/cvlekce%3Ecifry-innerhtml/chybne.png)
