@@ -1,0 +1,86 @@
+/* Google fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Pacifico&subset=latin-ext');
+/* nejsme vcerejsi, pouzivame moderni a intuitivni box model */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+	box-sizing: inherit;
+}
+
+body {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	min-height: 100vh;
+	margin: 0;
+	padding: 50px;
+	font: 20px/1.5 sans-serif;
+	background-color: white;
+	color: #333;
+	font-family: Calibri, sans-serif;
+}
+h1 {
+	text-align: center;
+}
+
+.container {
+	height: 600px;
+}
+
+#formular {
+	margin: 10px;
+}
+
+#message {
+	margin: 10px;
+}
+
+.akcept {
+	background-color: #00DD00;
+}
+
+.error {
+	background-color: #FF8686;
+}
+
+#string {
+	margin: 10px;
+	display: flex;
+}
+
+.letter {
+	margin: 5px;
+	padding: 10px;
+	border-radius: 5px;
+	color: white;
+}
+
+.form__label {
+	margin: 5px;
+	color: gray;
+}
+
+.form__input {
+	margin: 5px;
+	border: 1px solid gray;
+}
+
+.form__button {
+	margin: 5px;
+	padding: 10px;
+	border: 0;
+	border-radius: 5px;
+	background-color: #13529e;
+	color: white;
+	text-transform: uppercase;
+}
+
+.form__button:hover {
+	background-color: #083872;
+}
