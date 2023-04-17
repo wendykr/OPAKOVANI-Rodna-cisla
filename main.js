@@ -23,14 +23,14 @@
 
 // 2. Platnost jako funkce
 
-const rodnaCislaKOtestovani = [
-  '123',
-  'nepovím',
-  '7060201236',
-  '123456789123456789',
-  '9062185440',
-  '123č56q8y7',
-];
+// const rodnaCislaKOtestovani = [
+//   '123',
+//   'nepovím',
+//   '7060201236',
+//   '123456789123456789',
+//   '9062185440',
+//   '123č56q8y7',
+// ];
 
 const checkBirthID = (item) => {
 
@@ -97,9 +97,10 @@ const isDigit = (letter) => {
 
 /* 2. Detailní kontrola cifer */
 
-let result = [];
-
 const validateCharacters = (text) => {
+
+    let result = [];
+
     Array.from(text).forEach((oneNumber) => {
         const obj = {char: oneNumber, digit: isDigit(oneNumber)}
         result.push(obj);
@@ -119,15 +120,15 @@ const formularElm = document.querySelector('#formular');
 const cisloElm = document.querySelector('#cislo');
 const messageElm = document.querySelector('#message');
 const stringElm = document.querySelector('#string');
-const letterElm = document.querySelector('.letter');
 
 const process = (event) => {
     event.preventDefault();
     console.log('click');
     console.log('Cislo.value: ' + cislo.value);
+    console.log(stringElm);
 
     if (cislo.value === '') {
-        if(event.target!==cislo&event.target!==formular) {
+        if (event.target!==cislo&event.target!==formular) {
             cisloElm.style = "outline: 0";
          } else if (event.target==cislo&&event.target!==formular) {
             cisloElm.style = "outline: 2px solid #000";
@@ -138,7 +139,7 @@ const process = (event) => {
         messageElm.innerHTML = `⚠ Vyplňte toto pole`;
         cisloElm.focus();
     } else {
-        if(checkBirthID(cislo.value) === 'ok' && cislo.value !== '') {
+        if(checkBirthID(cislo.value) === 'ok') {
             messageElm.style.color = 'green';
             messageElm.innerHTML = `✔ V pořádku`;
             cisloElm.style = "outline: 0";
@@ -150,22 +151,26 @@ const process = (event) => {
 
 
 /* Cvičení: innerHTML */
+        let vstup = validateCharacters(cislo.value);
+        // console.log(vstup.length);
+
+        stringElm.innerHTML = ``;
 
 // 1. Cifry jako HTML elementy
-        validateCharacters(cislo.value);
 
-        result.forEach((letter, index) => {
+        vstup.forEach((letter, index) => {
             console.log(letter);
             console.log(index);
-            if (isDigit(letter.char) === true) {
+
+            if (isDigit(letter.char) === true && vstup.length === 10) {
                 stringElm.innerHTML += `<span class="letter akcept">${letter.char}</span>`;
-            } else {;
+            } else {
                 stringElm.innerHTML += `<span class="letter error">${letter.char}</span>`;
             }
         })
 
-        if(checkBirthID(cislo.value) === 'ok') {
-            cislo.value = ''; 
+        if (checkBirthID(cislo.value) === 'ok') {
+            cislo.value = '';
         } else {
             cislo.value = cislo.value; 
         }
