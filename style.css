@@ -21,7 +21,7 @@ body {
 	margin: 0;
 	padding: 50px;
 	font: 20px/1.5 sans-serif;
-	background-color: white;
+	background-color: #ffffff;
 	color: #333;
 	font-family: Calibri, sans-serif;
 }
@@ -42,11 +42,11 @@ h1 {
 }
 
 .akcept {
-	background-color: #00DD00;
+	background-color: #00dd00;
 }
 
 .error {
-	background-color: #FF8686;
+	background-color: #ff8686;
 }
 
 #string {
@@ -58,17 +58,17 @@ h1 {
 	margin: 5px;
 	padding: 10px;
 	border-radius: 5px;
-	color: white;
+	color: #ffffff;
 }
 
 .form__label {
 	margin: 5px;
-	color: gray;
+	color: #808080;
 }
 
 .form__input {
 	margin: 5px;
-	border: 1px solid gray;
+	border: 1px solid #808080;
 }
 
 .form__button {
@@ -77,10 +77,14 @@ h1 {
 	border: 0;
 	border-radius: 5px;
 	background-color: #13529e;
-	color: white;
+	color: #ffffff;
 	text-transform: uppercase;
 }
 
 .form__button:hover {
 	background-color: #083872;
+}
+
+.required {
+	color: #ff0000;
 }
